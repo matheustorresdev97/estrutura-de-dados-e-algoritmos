@@ -59,3 +59,15 @@ showTasks(taskList.getTasks());
 taskList.setTaskToCompleted(3);
 console.log("Task with ID 3 after completion:")
 showTask(taskList.getTaskById(3));
+
+
+// 6 - Update task data
+const updatedTask = new Task(3, "Review progress with updated description", "project", TaskStatus.COMPLETED);
+taskList.setTaskDataById(3, updatedTask);
+console.log("Task with ID 3 after updating data:")
+showTask(taskList.getTaskById(3));
+
+// 7 - Move task
+taskList.move(3, 0);
+console.log("Tasks after moving task with ID 3 to the top:")
+showTasks(taskList.getTasks());
